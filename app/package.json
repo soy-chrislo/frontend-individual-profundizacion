@@ -1,0 +1,21 @@
+{
+	"name": "app",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"sass": "sass public/styles.scss public/styles.css",
+		"dev": "nodemon --ext js,scss index.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"devDependencies": {
+		"node-sass-middleware": "^1.1.0",
+		"nodemon": "^3.1.0",
+		"sass": "^1.77.2"
+	},
+	"dependencies": {
+		"express": "^4.19.2"
+	}
+}

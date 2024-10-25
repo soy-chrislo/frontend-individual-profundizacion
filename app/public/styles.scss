@@ -1,0 +1,47 @@
+// Variables Sass
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$font-stack: 'Arial, sans-serif';
+$border-radius: 5px;
+$padding: 10px;
+
+.container {
+  font-family: $font-stack;
+  padding: $padding;
+
+  .title {
+    color: $primary-color;
+    border-bottom: 2px solid $primary-color;
+    padding-bottom: $padding / 2;
+  }
+
+  .description {
+    color: darken($primary-color, 20%);
+    margin-top: $padding;
+  }
+
+  .btn {
+    border: none;
+    border-radius: $border-radius;
+    padding: $padding;
+
+    &.primary-btn {
+      background-color: $primary-color;
+      color: #fff;
+    }
+
+    &.secondary-btn {
+      background-color: $secondary-color;
+      color: #fff;
+    }
+  }
+}
+
+// Interpolación
+@mixin make-border($color, $width) {
+  border: #{$width} solid #{$color};
+}
+
+.container {
+  @include make-border($primary-color, 3px);
+}
